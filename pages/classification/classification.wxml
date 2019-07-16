@@ -1,0 +1,22 @@
+<scroll-view class='father-type' scroll-x>
+  <block wx:for='{{types}}'>
+    <text wx:if='{{item.index === btnIndex}}' style='color:{{appColor}}'>{{item.name}}</text>
+    <text wx:else bindtap='typeSelected' data-index='{{item.index}}'>{{item.name}}</text>
+  </block>
+</scroll-view>
+<swiper class='swiper-content' style='height:{{swiper_height}}px' bindchange='swiperScroll' current='{{btnIndex}}'>
+  <block wx:for='{{types}}' wx:for-item='category'>
+    <swiper-item>
+      <view class='content-view'>
+        <!-- 二级筛选 -->
+        <view class='category-bg'>
+          <!-- 筛选按钮 -->
+          <view wx:for='{{category.categories}}' class="width{{category.categories.length}}">
+            <text>{{item.categoryName}}</text>
+            <image src='../../icons/classification/down.png'></image>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

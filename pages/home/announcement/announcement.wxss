@@ -1,0 +1,16 @@
+/* pages/home/announcement.wxss */
+.title {
+  margin: 20rpx 10rpx;
+  width: 730rpx;
+  height: 20rpx;
+  font-size: 15px;
+  text-align: center;
+  float: left;
+}
+.content {
+  width: 710rpx;
+  margin: 20rpx;
+  padding: 20rpx;
+  font-size: 15px;
+  float: left;
+}

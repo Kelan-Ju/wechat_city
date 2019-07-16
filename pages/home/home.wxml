@@ -1,0 +1,153 @@
+<view style='height:100%;'>
+  <!-- 滚动视图 -->
+  <swiper indicator-dots autoplay circular interval="2000" duration="500" class='swiper'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image style="width:750rpx;" src="{{item}}" bindload="autoImage" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 统计 -->
+  <view id='count-type'>
+    <block wx:for="{{counts}}">
+      <view class='count-list'>
+        <view class='count-icon'>
+          <image src="{{item.icon}}" mode="aspectFit" />
+        </view>
+        <view class='count-title'>
+          {{item.title}}
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 公告 -->
+  <block wx:if='{{announcementData.length>0}}'>
+    <view id='announcement_type'>
+      <view class='announcement-title' style='color:{{appColor}}'>公告</view>
+      <text class='announcement-gap'>|</text>
+      <swiper interval="2000" duration="500" autoplay vertical circular>
+        <block wx:for='{{announcementData}}'>
+          <swiper-item>
+            <view class='announcement-content text-type' bindtap='announcementTap' data-item='{{item}}'>{{item.title}}</view>
+            <view class='announcement-date'>{{item.date}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <image class='announcement-close' src='../../icons/home/announcement_close.png' bindtap='announcementClose'></image>
+    </view>
+  </block>
+
+  <!-- 按钮表格 -->
+  <swiper id='service-type' indicator-dots indicator-active-color='{{appColor}}' indicator-color='#ccc'>
+    <swiper-item>
+      <block wx:for='{{serviceButtons01}}'>
+        <view class='service-item'>
+          <image src='{{item.icon}}'></image>
+          <view>{{item.title}}</view>
+        </view>
+      </block>
+    </swiper-item>
+    <swiper-item>
+      <block wx:for='{{serviceButtons02}}'>
+        <view class='service-item'>
+          <image src='{{item.icon}}'></image>
+          <view>{{item.title}}</view>
+        </view>
+      </block>
+    </swiper-item>
+  </swiper>
+
+  <!-- tableView -->
+  <!-- <block wx:for='{{shopArray}}'>
+    <view class='shopList-item'>
+      <image src='{{item.icon}}'></image>
+      <view class='shopList-item-content'>
+        <text class='shopList-item-content-name text-type'>{{item.name}}</text>
+        <text class='shopList-item-content-distance' style='color:{{appColor}}'>{{item.distance}}</text>
+        <view class='shopList-item-content-starView'>
+          <block wx:for='{{item.star}}'>
+            <image src='../../icons/home/star.png'></image>
+          </block>
+        </view>
+        <block wx:for='{{item.advantage}}'>
+          <view class='shopList-item-content-service'>{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </block> -->
+
+  <!-- 最新发布、离我最近 -->
+  <view class='publication-bg'>
+    <view class='newPublication'>
+      <text bindtap='publicationClick' data-type='new' style='color:{{appColor}}' wx:if='{{publicationType == 0}}'>最新发布</text>
+      <text bindtap='publicationClick' data-type='new' wx:else>最新发布</text>
+    </view>
+    <view class='nearest'>
+      <text bindtap='publicationClick' data-type='nearest' style='color:{{appColor}}' wx:if='{{publicationType == 1}}'>离我最近</text>
+      <text bindtap='publicationClick' data-type='nearest' wx:else>离我最近</text>
+    </view>
+    <view class='bottom-line-left' style='background-color:{{appColor}}' wx:if='{{publicationType == 0}}'></view>
+    <view class='bottom-line-right' style='background-color:{{appColor}}' wx:if='{{publicationType == 1}}'></view>
+  </view>
+
+  <!-- tableView -->
+  <block wx:for='{{publicationArray}}'>
+    <view class='publicationList'>
+      <image class='portrait' src='{{item.portrait}}'></image>
+      <view class='name-time-bg text-type'>
+        <text class='nickname'>{{item.nickname}}</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+      <!-- 置顶 -->
+      <image class='setTop' src='../../icons/home/setTop.png'></image>
+      <button plain type='primary' class='contact-button' bindtap='contact'>联系Ta</button>
+      <!-- 内容文字 -->
+      <text class='publicationContent'><text style='color:{{appColor}}'>#{{item.type}}#</text>{{item.content}}</text>
+      <!-- 图片列表 -->
+      <view class='sharing-bg'>
+        <block wx:for='{{item.sharingPhotos}}' wx:for-item='url'>
+          <image class='sharing-photo' src='{{url}}' mode="scaleToFill" bindtap='previewImage' data-current-url='{{url}}' data-urls='{{item.sharingPhotos}}'></image>
+        </block>
+      </view>
+      <!-- 地址 -->
+      <view class='address-bg'>
+        <image src='../../icons/home/address_gray.png'></image>
+        <text>{{item.address}}</text>
+      </view>
+      <view class='bottom-view'>
+        <!-- 浏览数 -->
+        <view>
+          <image src='../../icons/home/browse.png'></image>
+          <text style='color:#aaa'>{{item.browse}}</text>
+        </view>
+        <!-- 评论数 -->
+        <view>
+          <image src='../../icons/home/comment.png'></image>
+          <text style='color:#aaa'>{{item.comment}}</text>
+        </view>
+        <!-- 点赞数 -->
+        <view bindtap='praiseClick' data-index='{{index}}' data-is-selected='{{item.is_praised}}' data-praise-count='{{item.praise}}'>
+          <image src="{{item.is_praised == true ? '../../icons/home/praise_selected.png' : '../../icons/home/praise.png'}}"></image>
+          <text style="color:{{item.is_praised == true ? appColor : '#aaa'}}">{{item.praise}}</text>
+        </view>
+        <!-- 转发数 -->
+        <view bindtap='shareClick'>
+          <image src='../../icons/home/share.png'></image>
+          <text style='color:#aaa'>分享</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 地址、搜索栏 -->
+<view class='addressView'>
+  <image class='address-icon' src='../../icons/home/address_white.png' bindtap='addressChoose' />
+  <view class='address-name text-type' bindtap='addressChoose'>{{locationName}}</view>
+  <view class='search-scan' bindtap='gotoSearch'>
+    <image class='search' src='../../icons/home/search.png' />
+    <text class='search-placeholder'>请输入搜索内容</text>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<!--pages/home/announcement.wxml-->
+<text class='title' style='color:{{appColor}}'>{{title}}</text>
+<text class='content'>{{content}}</text>

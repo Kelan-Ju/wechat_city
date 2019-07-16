@@ -1,0 +1,50 @@
+<!--pages/shop/shop.wxml-->
+<view class='head'>
+  <view class='search-bg' style='border: 1rpx {{appColor}} solid'>
+    <input placeholder='请输入商家名称'></input>
+    <view style='background-color:{{appColor}}'>搜索</view>
+  </view>
+  <button style='background-color:{{appColor}}' class='join' bindtap='joinClick'>我要入驻</button>
+</view>
+
+<!-- 排行、附近 -->
+<view class='content'>
+  <view class='ranking-bg'>
+    <view class='newranking' bindtap='rankingClick' data-type='ranking'>
+      <text style='color:{{appColor}}' wx:if='{{rankingType == 0}}'>排行</text>
+      <text wx:else>排行</text>
+    </view>
+    <view class='nearest' bindtap='rankingClick' data-type='nearest'>
+      <text style='color:{{appColor}}' wx:if='{{rankingType == 1}}'>附近</text>
+      <text wx:else>附近</text>
+    </view>
+    <view class='bottom-line-left' style='background-color:{{appColor}}' wx:if='{{rankingType == 0}}'></view>
+    <view class='bottom-line-right' style='background-color:{{appColor}}' wx:if='{{rankingType == 1}}'></view>
+  </view>
+
+  <!-- 店铺列表 -->
+  <import src='../../libs/star.wxml' />
+  <view class='list-view'>
+    <view class='shops-bg' wx:for='{{shops}}'>
+      <image class='shop-image' src='{{item.image}}'></image>
+      <view class='content-bg'>
+        <text class='shop-name'>{{item.name}}</text>
+        <!-- 星星 -->
+        <template is='starTemplate' data='{{starScore:item.starScore}}'></template>
+        <!-- 销售类别 -->
+        <view class='kind'>
+          <block wx:for='{{item.kinds}}' wx:for-item='kind'>
+            <text>{{kind}}</text>
+          </block>
+        </view>
+        <!-- 团购优惠tips -->
+        <view class='tuan-bg'>
+          <image src='../../icons/shop/tuan.png'></image>
+          <text>{{item.tip}}</text>
+        </view>
+      </view>
+      <!-- 距离 -->
+      <text class='distance'>{{item.distance}}</text> 
+    </view>
+  </view>
+</view>

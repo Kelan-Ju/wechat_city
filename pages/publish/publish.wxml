@@ -1,0 +1,27 @@
+<!--pages/publish/publish.wxml-->
+<view class='disclaimer'>
+  免责申明：平台发布的所有信息（收费、免费），平台只负责发布展示，与平台本身无关，平台不负任何责任。
+</view>
+
+<!-- 入驻入口 -->
+<view class='join' bindtap='joinClick'>
+  <image class='shop' src='../../icons/publish/shop.png'></image>
+  <view>
+    <text class='join-title'>我是商家，入驻“智汇漳州”</text>
+    <text class='join-introduce'>超低成本，网络宣传，简单有效，方便快捷</text>
+  </view>
+  <image class='arrow-right' src='../../icons/publish/arrow_right.png'></image>
+</view>
+
+<!-- 请选择你要发布的栏目 -->
+<canvas  class='category' canvas-id='line'>
+  <text>请选择你要发布的栏目</text>
+</canvas>
+
+<!-- 栏目列表 -->
+<view class='item-bg'>
+  <view wx:for='{{items}}'>
+    <image src='../../icons/publish/item_icon.jpeg'></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>

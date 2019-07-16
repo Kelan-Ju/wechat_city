@@ -1,0 +1,14 @@
+/* 星星评分 */
+.rankstar-view {
+  margin-top: 15rpx; 
+  margin-left: 0rpx;
+  width: 180rpx;
+  height: 25rpx;
+  display: flex;
+  flex-direction: row;
+}
+.rankstar-view image {
+  margin: 0rpx 10rpx 0rpx 0rpx;
+  width: 25rpx;
+  height: 25rpx;
+}

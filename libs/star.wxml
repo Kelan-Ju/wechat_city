@@ -1,0 +1,9 @@
+<template name='starTemplate'>
+  <view class='rankstar-view'>
+    <block wx:for='{{[2,4,6,8,10]}}'>
+      <image wx:if='{{item > starScore+1}}' src='../../icons/shop/star_gray.png'></image>
+      <image wx:if='{{item === starScore+1}}' src='../../icons/shop/star_half.png'></image>
+      <image wx:if='{{item <= starScore}}' src='../../icons/shop/star_full.png'></image>
+    </block>
+  </view>
+</template>

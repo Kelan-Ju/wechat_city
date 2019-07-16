@@ -1,0 +1,95 @@
+/* 免责申明 */
+.disclaimer {
+  margin: 30rpx;
+  padding: 30rpx;
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  color: #aaa;
+  line-height: 25px;
+  background-color: #e1f2fe;
+}
+
+/* 入驻入口 */
+.join {
+  margin: 0rpx;
+  width: 100%;
+  height: 200rpx;
+  border-top: 1rpx #ddd solid;
+  border-bottom: 1rpx #ddd solid;
+}
+
+.join .shop {
+  margin-left: 40rpx;
+  margin-top: 60rpx; 
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.join view {
+  margin-left: 20rpx;
+  width: 550rpx;
+  height: 200rpx;
+  float: left;
+}
+.join .join-title {
+  margin-top: 45rpx;
+  width: 100%;
+  font-size: 17px;
+  float: left;
+}
+.join .join-introduce {
+  margin-top: 25rpx;
+  width: 100%;
+  font-size: 14px;
+  color: #bbb;
+  float: left;
+}
+.join .arrow-right {
+  margin-left: -10rpx;
+  margin-top: 80rpx;
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+
+/* 请选择你要发布的栏目 */
+.category {
+  margin: 0rpx;
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+  line-height: 90rpx;
+  border-bottom: 1rpx #ddd solid;
+}
+
+/* 栏目列表 */
+.item-bg {
+  margin: 0rpx;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+.item-bg view {
+  margin: 0rpx;
+  width: 25%;
+  height: auto;
+  float: left;
+}
+.item-bg view image {
+  margin-left: 53.75rpx;
+  margin-top: 25rpx;
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.item-bg view text {
+  margin-left: 0rpx;
+  margin-top: 10rpx;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  float: left;
+}

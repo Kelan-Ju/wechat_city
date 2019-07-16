@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/announcement/announcement",
+    "pages/classification/classification",
+    "pages/publish/publish",
+    "pages/mine/mine",
+    "pages/shop/shop",
+    "pages/home/search/search",
+    "pages/shop/join/join"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#18b768",
+    "navigationBarTitleText": "智汇漳州",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "icons/tabBar/tabbar_homepage.png",
+        "selectedIconPath": "icons/tabBar/tabbar_homepage_selected.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "icons/tabBar/tabbar_classification.png",
+        "selectedIconPath": "icons/tabBar/tabbar_classification_selected.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "icons/tabBar/tabbar_publish.png",
+        "selectedIconPath": "icons/tabBar/tabbar_publish_selected.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商家",
+        "iconPath": "icons/tabBar/tabbar_shop.png",
+        "selectedIconPath": "icons/tabBar/tabbar_shop_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icons/tabBar/tabbar_mine.png",
+        "selectedIconPath": "icons/tabBar/tabbar_mine_selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

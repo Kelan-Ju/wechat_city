@@ -1,0 +1,197 @@
+/* pages/shop/shop.wxss */
+/******************************** 搜索、入驻 ********************************/
+.head {
+  margin: 0rpx;
+  width: 100%;
+  height: 75rpx;
+}
+.search-bg {
+  margin-left: 15rpx;
+  margin-top: 15rpx;
+  width: 363rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 15rpx;
+  float: left;
+}
+
+.search-bg view {
+  margin-right: 0rpx;
+  margin-top: 0rpx;
+  width: 100rpx;
+  height: 60rpx;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  float: right;
+}
+
+.search-bg input {
+  margin-top: 0rxp;
+  padding-left: 10rpx;
+  margin-left: 0rpx;
+  width: 253rpx;
+  height: 60rpx;
+  float: left;
+}
+
+.join {
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+  width: 342rpx;
+  height: 63rpx;
+  line-height: 60rpx;
+  color: white;
+  border-radius: 15rpx;
+  text-align: center;
+  font-size: 17px;
+  background: none;
+  float: left;
+}
+.join::after {
+  border: none;
+}
+
+/******************************** 排行、附近 ********************************/
+.content {
+  margin: 0rpx;
+  width: 100%;
+  height: auto;
+  /* background-color: yellow; */
+  /* float: left; */
+}
+.ranking-bg {
+  margin-top: 15rpx;
+  width: 750rpx;
+  height: 79rpx;
+  font-size: 17px;
+  line-height: 65rpx;
+  border-top: 4px #eee solid;
+  border-bottom: 1px #eee solid;
+   /* float: left;  */
+}
+
+.ranking-bg .newranking {
+  margin-top: 15rpx;
+  width: 50%;
+  height: 60rpx;
+  text-align: center;
+  float: left;
+}
+
+.ranking-bg .nearest {
+  margin-top: 15rpx;
+  width: 50%;
+  height: 60rpx;
+  text-align: center;
+  float: left;
+}
+
+.bottom-line-left {
+  margin-bottom: 0rpx;
+  margin-left: 12.5%;
+  width: 25%;
+  height: 4rpx;
+  float: left;
+}
+
+.bottom-line-right {
+  margin-bottom: 0rpx;
+  margin-left: 62.5%;
+  width: 25%;
+  height: 4rpx;
+  float: left;
+}
+
+/******************************** 商铺列表 ********************************/
+.list-view {
+  margin: 0rpx;
+  width: 750rpx;
+  height: auto;
+}
+.shops-bg {
+  margin: 0rpx;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px #eee solid;
+  float: left; 
+}
+
+.shops-bg image {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  float: left; 
+}
+
+.content-bg {
+  margin-left: 20rpx;
+  margin-top: 0rpx;
+  padding-top: 15rpx;
+  width: 545rpx;
+  height: auto;
+  float: left; 
+}
+
+.content-bg .shop-name {
+  margin-top: 0rpx;
+  margin-left: 0rpx;
+  width: 100%;
+  font-size: 17px;
+}
+
+/* 星星评分 */
+@import "../../libs/star.wxss";
+
+/* 销售类别 */
+.content-bg .kind {
+  margin-left: 0rpx;
+  margin-top: 15rpx; 
+  width: auto;
+  height: 17px;
+  font-size: 15px;
+}
+.content-bg .kind text {
+  margin: 10rpx 25rpx 0rpx 0rpx;
+  width: auto;
+  height: 100%;
+  color: gray;
+}
+.tuan-bg {
+  margin-top: 30rpx; 
+  margin-left: 0rpx;
+  margin-bottom: 20rpx;
+  width: auto;
+  height: 17px;
+  display: flex;
+}
+.tuan-bg image {
+  margin: 0rpx;
+  width: 17px;
+  height: 17px;
+}
+.tuan-bg text {
+  margin-top: 0rpx;
+  margin-left: 10rpx;
+  width: 533rpx;
+  height: 100%;
+  color: gray;
+  font-size: 15px;
+  line-height: 17px;
+  text-overflow: ellipsis; /*超出省略*/
+  white-space: nowrap; /*不换行*/
+  overflow: hidden; /*超出不显示*/
+}
+.distance {
+  margin-top: 75rpx;
+  margin-right: 15rpx;
+  width: auto;
+  height: 17px;
+  font-size: 15px;
+  color: gray;
+  display: flex;
+  flex-direction: row-reverse;
+}

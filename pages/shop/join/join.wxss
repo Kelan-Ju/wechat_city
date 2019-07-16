@@ -1,0 +1,164 @@
+/* pages/shop/join/join.wxss */
+page {
+  background-color: #F5F5F5;
+}
+
+.white-bg {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: auto;
+  border-radius: 20rpx;
+  background-color: white;
+  float: left;
+}
+.white-bg .row-bg-view {
+  margin: 0rpx;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx; 
+}
+.white-bg .title {
+  margin-left: 20rpx;
+  height: 20px;
+  float: left;
+}
+.white-bg input {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.row-bg-view view {
+  margin-top: 0rpx;
+  margin-left: 20rpx;
+  line-height: 90rpx; 
+  float: left;
+}
+.title text {
+  letter-spacing: 18rpx;
+}
+.row-bg-view .address {
+  margin-left: 17rpx;
+  color: gray;
+}
+.check-box-view {
+  margin-left: 20rpx;
+  width: 670rpx;
+  height: 150rpx;
+}
+.checkbox {
+  margin: 0rpx; 
+  width: 33.3%;  
+  line-height: 70rpx;
+  display: inline-block;
+}
+
+/* 商家logo、老板微信 */
+.logo {
+  margin-top: 0rpx;
+  margin-left: 0rpx;
+  width: 355rpx;
+  height: auto;
+  float: left;
+}
+.logo image {
+  margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  width: 161rpx;
+  height: 161rpx;
+}
+.logo view {
+  margin: 0rpx;
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: gray;
+  font-size: 15px;
+}
+
+/* 商家轮播图 */
+.scoll-photos {
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  width: 670rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+.scoll-photos image {
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+}
+
+/* 商家介绍 */
+.white-bg textarea {
+  margin-left: 20rpx;
+  width: 670rpx;
+  height: 250rpx;
+}
+
+/* 验证码 */
+.verification-bg {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: auto;
+  border-radius: 20rpx;
+  background-color: white;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+.verification-bg text {
+  margin-left: 20rpx;
+  width: 330rpx;
+}
+.verification-bg input {
+  margin-top: 10rpx;
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.verification {
+  margin: 15rpx;
+  width: 270rpx;
+  height: 70rpx;
+  color: white;
+  font-size: 15px;
+  line-height: 70rpx;
+  border-radius: 15rpx;
+  text-align: center;
+}
+
+/* 用户协议 */
+.protocol-checkbox-bg {
+  margin: 40rpx 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+.protocol-checkbox {
+  margin: 0rpx;
+  color: gray;
+}
+.protocol {
+  color: red;
+}
+
+/* 申请入驻 */
+.commit {
+  margin: 20rpx;
+  width: 710rpx;
+  height: 80rpx;
+  color: white;
+  line-height: 80rpx;
+  float: left;
+}
+.commit::after {
+  border: none;
+}

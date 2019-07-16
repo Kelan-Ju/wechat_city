@@ -1,0 +1,81 @@
+/* pages/classification/classification.wxss */
+.father-type {
+  margin: 0rpx;
+  width: 750rpx;
+  height: 83rpx;
+  border-bottom: 5rpx #ddd solid;
+  display: flex;
+  white-space: nowrap;
+  float: left;
+}
+
+.father-type text {
+  margin: 0rpx 10rpx 0rpx;
+  font-size: 17px;
+  line-height: 80rpx;
+  display: inline-block; 
+}
+
+.swiper-content {
+  margin: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.content-view {
+  margin: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+
+/* 二级筛选 */
+
+.category-bg {
+  margin: 0rpx;
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 1px #ddd solid;
+}
+
+.category-bg .width2 {
+  margin: 0rpx;
+  width: 50%;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 70rpx;
+  float: left;
+}
+
+.category-bg .width3 {
+  margin: 0rpx;
+  width: 33.33%;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 70rpx;
+  float: left;
+}
+
+.category-bg .width4 {
+  margin: 0rpx;
+  width: 25%;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 70rpx;
+  float: left;
+}
+
+.category-bg view text {
+  height: 70rpx;
+}
+
+.category-bg view image {
+  margin-top: -10rpx;
+  margin-left: 7rpx;
+  width: 20rpx;
+  height: 10rpx;
+  line-height: 70rpx;
+  vertical-align: middle;
+}
